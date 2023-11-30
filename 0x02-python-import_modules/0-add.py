@@ -1,6 +1,5 @@
 #!/usr/bin/python3
+from add_0 import add
 a = 1
 b = 2
-add_0 = __import__('add_0', fromlist=['add'])
-sum = add_0.add(a, b)
-print("{} + {} = {}".format(a, b, sum))
+print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
