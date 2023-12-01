@@ -19,4 +19,5 @@ elif d == '/':
 else:
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
-print("{} {} {} = {}".format(a, d, b, x))
+print("{:d} {:s} {:d} = {:d}".format(a, d, b, x))
+exit(0)
