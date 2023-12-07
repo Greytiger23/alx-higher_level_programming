@@ -13,4 +13,6 @@ def roman_to_int(roman_string):
         else:
             x += c
         d = c
+    if not isinstance(x, int):
+        return 0
     return x
