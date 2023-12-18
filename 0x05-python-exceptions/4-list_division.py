@@ -2,7 +2,7 @@
 def list_division(my_list_1, my_list_2, list_length):
     x = []
     try:
-        for a in range(list_length):
+        for a in range(0, list_length):
             try:
                 b = float(my_list_1[a])
                 c = float(my_list_2[a])
