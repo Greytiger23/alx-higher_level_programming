@@ -1,15 +1,26 @@
 #!/usr/bin/python3
+"""module that defines a square class"""
+
+
 class Square:
+    """represents the class"""
     def __init__(self, size=0):
+        """private instance attribute"""
         self.size = size
+
     def size(self):
-        return self.__size
+        """property"""
+        return self.size
+
     def size(self, value):
+        """property setter"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = value
+            self.size = value
+
     def area(self):
-        self.__size ** 2
+        """public instance method"""
+        return self._size ** 2
