@@ -1,31 +1,49 @@
 #!/usr/bin/python3
+"""module that defines a square class"""
+
+
 class Square:
+    """represents the class"""
     def __init__(self, size=0, position=(0, 0)):
+        """private instance instalation"""
         self.size = size
         self.position = position
+
     def size(self):
-        return self.__size
+        """property"""
+        return self.size
+
     def size(self, value):
+        """property setter"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = value
+            self.size = value
+
     def position(self):
-        return self.__position
+        """private instance attribute"""
+        return self.position
+
     def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2 or \ not all(isinstance(a, int) and a >= 0 for a in value):
+        """property setter"""
+        if not isinstance(value, tuple) or len(value) != 2 or \
+        not all(isinstance(a, int) and a >= 0 for a in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.__position = value
+            self.position = value
+
     def area(self):
-        self.__size ** 2
+        """public instance method"""
+        return self.size ** 2
+
     def my_print(self):
-        if self.__size == 0:
+        """public instance method"""
+        if self.size == 0:
             print("")
         else:
-            for _ in range(sefl.__position[1]):
+            for _ in range(self.position[1]):
                 print()
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+            for _ in range(self.size):
+                print(" " * self.position[0] + "#" * self.size)

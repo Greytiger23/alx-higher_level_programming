@@ -10,7 +10,7 @@ class Square:
 
     def size(self):
         """property"""
-        return self.__size
+        return self.size
 
     def size(self, value):
         """property setter"""
@@ -19,16 +19,16 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = value
+            self.size = value
 
     def area(self):
         """public instance method"""
-        return self.__size ** 2
+        return self.size ** 2
 
     def my_print(self):
         """public instance method"""
-        if (self.__size == 0):
+        if (self.size == 0):
             print("")
         else:
-            for _ in range(self.__size):
-                print("#" * self.__size)
+            for _ in range(self.size):
+                print("#" * self.size)
