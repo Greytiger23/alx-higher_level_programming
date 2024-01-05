@@ -40,18 +40,17 @@ class Rectangle:
 
     def perimeter(self):
         """public instance method"""
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         """public instance method"""
         if self.width == 0 or self.height == 0:
             return ""
-        else:
-            a = ""
-            for b in range(self.height):
-                a += "#" * self.width + "\n"
-            return a.rstrip()
+        a = ""
+        for b in range(self.height):
+            a += "#" * self.width + "\n"
+        return a.rstrip()
 
     def __rep__(self):
         """public instance method"""
-        return f"Rectangle({self.width}, {self.height})"
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)

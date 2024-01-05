@@ -4,20 +4,18 @@
 
 class Rectangle:
     """represents the class"""
-    x = 0
-    y = "#"
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """instantiation with option"""
-        self._width = 0
-        self._height = 0
         self.width = width
         self.height = height
-        Rectangle.x += 1
+        Rectangle.number_of_instances += 1
 
     def width(self):
         """propety"""
-        return self._width
+        return self.width
 
     def width(self, value):
         """property setter"""
@@ -25,11 +23,11 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self._width = value
+        self.width = value
 
     def height(self):
         """property"""
-        return self._height
+        return self.height
 
     def height(self, value):
         """property setter"""
@@ -37,34 +35,34 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._height = value
+        self.height = value
 
     def area(self):
         """public instance method"""
-        return self._width * self._height
+        return self.width * self.height
 
     def perimeter(self):
         """public instance method"""
-        return 2 * (self._width + self._height)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         """public instance method"""
-        if self._width == 0 or self._height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
         else:
             a = ""
-            for b in range(self._height):
-                a += str(self.y) * self._width + "\n"
+            for b in range(self.height):
+                a += str(self.print_symbol) * self.width + "\n"
             return a.rstrip()
 
     def __rep__(self):
         """public instance method"""
-        return f"Rectangle({self._width}, {self._height})"
+        return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
         """public instance method"""
         print("Bye rectangle...")
-        Rectangle.x -= 1
+        Rectangle.number_of_instances -= 1
 
     def bigger_or_equal(rect_1, rect_2):
         """static method"""
@@ -81,4 +79,4 @@ class Rectangle:
 
     def square(cls, size=0):
         """class method"""
-        return cls(width=size, height=size)
+        return cls(width == height == size)
