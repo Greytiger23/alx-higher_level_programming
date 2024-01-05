@@ -7,14 +7,12 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """instantiation with option"""
-        self._width = 0
-        self._height = 0
         self.width = width
         self.height = height
 
     def width(self):
         """propety"""
-        return self._width
+        return self.width
 
     def width(self, value):
         """property setter"""
@@ -22,11 +20,11 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self._width = value
+        self.width = value
 
     def height(self):
         """property"""
-        return self._height
+        return self.height
 
     def height(self, value):
         """property setter"""
@@ -34,12 +32,12 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._height = value
+        self.height = value
 
     def area(self):
         """public instance method"""
-        return self._width * self._height
+        return self.width * self.height
 
     def perimeter(self):
         """public instance method"""
-        return 2 * (self._width + self._height)
+        return 2 * (self.width + self.height)
