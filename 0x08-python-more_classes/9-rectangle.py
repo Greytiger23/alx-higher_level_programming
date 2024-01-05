@@ -6,6 +6,7 @@ class Rectangle:
     """represents the class"""
     number_of_instances = 0
     print_symbol = "#"
+    square = 0
 
     def __init__(self, width=0, height=0):
         """instantiation with option"""
@@ -79,4 +80,6 @@ class Rectangle:
 
     def square(cls, size=0):
         """class method"""
-        return cls(width == height == size)
+        cls.width = size
+        cls.height = size
+        return (cls.width, cls.height)

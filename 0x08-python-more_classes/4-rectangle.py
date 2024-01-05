@@ -53,4 +53,4 @@ class Rectangle:
 
     def __rep__(self):
         """public instance method"""
-        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+        return "Rectangle({}, {})".format(self.width, self.height)
