@@ -7,3 +7,7 @@ def text_indentation(text):
             print("\n")
         else:
             print(a, end='')
+
+if __name__ == "__main__":
+    import doctest
+    doctest.textfile("tests/5-text_indentation.txt")

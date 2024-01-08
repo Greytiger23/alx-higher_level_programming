@@ -1,0 +1,56 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+Import module:
+    >>> say_my_name = __import__(‘3- say_my_name’). say_my_name
+
+Test basic:
+    >>> say_my_name(“hello”, “there”)
+    My name is hello there
+
+Test first:
+    >>> say_my_name(“hello”)
+    My name is hello
+ 
+Test last:
+    >>> say_my_name(“hello”, “”)
+    My name is hello
+
+Test both:
+    >>> say_my_name(“”, “”)
+    My name is
+
+Test space:
+    >>> say_my_name(“  “, “  “)
+    My name is
+
+Test empty:
+    >>> say_my_name(“”, “hello”)
+    My name is   hello
+
+Test zero:
+    >>> say_my_name(33, “hello”)
+    Traceback (most recent call last):
+    …
+    TypeError: first must be a string
+
+Test str arg:
+    >>> say_my_name(“hello”, 98)
+    Traceback (most recent call last):
+    …
+    TypeError: first must be string
+
+Test arguments:
+    >>> say_my_name(91, 98)
+    Traceback (most recent call last):
+    …
+    TypeError: first must be string
+
+Test missing:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    …
+    TypeError: say_my_name is missing position arg: ‘first’

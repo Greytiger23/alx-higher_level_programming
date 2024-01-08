@@ -1,0 +1,86 @@
+The ``5-print_square`` module
+======================
+
+Using ``print_square`
+-------------------
+
+Import module:
+    >>> text_indentation = __import__(‘5-text_indentation ’).text_indentation
+
+Test print 0:
+    >>> text_indentation(“ Hi there.”)
+    Hi there.
+    <BLANKLINE>
+
+Test space:
+    >>> text_indentation(“   “)
+    
+ 
+Test space:
+    >>> text_indentation(“Hello.   “)
+    Hello.
+    <BLANKLINE>
+
+Test print:
+    >>> text_indentation(“ Slow down. This is long.  “)
+    Slow down.
+    <BLANKLINE>
+    This is long.
+    <BLANKLINE>
+
+Test delimeters:
+    >>> text_indentation(“.?:”)
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test delimetere:
+    >>> text_indentation(“    ?   “)
+    ?
+    <BLANKLINE>
+
+Test float:
+    >>> text_indentation(“?Hello.”)
+    ?
+    <BLANKLINE>
+    Hello.
+    <BLANKLINE>
+
+Test newline:
+    >>> text_indentation(“?\n\n. \n\n:”)
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+     .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+     :
+    <BLANKLINE>
+
+Test none:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    …
+    TypeError: text must be string
+
+Test number:
+    >>> text_indentation(33)
+    Traceback (most recent call last):
+    …
+    TypeError: text must be string
+Test nan:
+    >>> print_square(float(‘nan’))
+    Traceback (most recent call last):
+    …
+    TypeError: size must be int
+
+Test missing:
+    >>> print_square(float(‘inf’))
+    Traceback (most recent call last):
+    …
+    TypeError: print_square() missing position arg: ‘size’

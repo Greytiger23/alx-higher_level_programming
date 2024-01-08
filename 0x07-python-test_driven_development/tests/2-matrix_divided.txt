@@ -1,0 +1,59 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+Import module:
+    >>> matrix_divided = __import__(‘2-matrix_divided’).matrix_divided
+
+Test matrix:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], 2)
+    [[1.0, 2.0, 4.0], [0.5, 1.0, 1.5]]
+
+Test el:
+    >>> matrix_divided([[2]], 2)
+    [[1.0]]
+ 
+Test unmodified:
+    >>> a = [[2, 4, 8], [1, 2, 3]]
+    >>> matrix_divided(a, 2)
+    [[1.0, 2.0, 4.0], [0.5, 1.0, 1.5]]
+    >>> a[1][1]
+    2
+
+Test division:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], -3)
+    [[-0.67, -1.33, -2.67], [-0.33, -0.67, -1.0]]
+
+Test int argument:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float(‘int’))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test nan:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float(‘nan’))
+    [[nan, nan, nan], [nan, nan, nan]]
+
+Test zero:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], 0)
+    Traceback (most recent call last):
+    …
+    ZeroDivisionError: division by zero
+
+Test first argument:
+    >>> matrix_divided(none, 1)
+    Traceback (most recent call last):
+    …
+    TypeError: matrix must be a matrix of int/float
+
+Test empty arg:
+    >>> matrix_divided([[]], 10)
+    Traceback (most recent call last):
+    …
+    TypeError: matrix must be a matrix of int/float
+
+Test matrix with non:
+    >>> matrix_divided([[2, 4, 8], [], “foo”, 3]], 2)
+    Traceback (most recent call last):
+    …
+    TypeError: matrix must be a matrix of int/float
