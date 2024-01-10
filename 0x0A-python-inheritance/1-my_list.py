@@ -9,7 +9,3 @@ class MyList(list):
         """public instance method"""
         a = sorted(self)
         print(a)
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/1-my_list.txt")
