@@ -1,0 +1,17 @@
+The ``example`` module
+======================
+
+Using ``factorial``
+-------------------
+
+Import:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Trying to print:
+>>> a = BaseGeometry()
+>>> a.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+
