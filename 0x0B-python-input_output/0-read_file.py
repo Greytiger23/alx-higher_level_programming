@@ -6,8 +6,7 @@ def read_file(filename=""):
     """defines the filename"""
     try:
         with open(filename, "r", encoding="utf-8") as file:
-            a = file.read()
-            print(a)
+            print(file.read(), end="")
     except FileNotFoundError:
         print("File '{}' not found.".format(filename))
     except Exception as e:
