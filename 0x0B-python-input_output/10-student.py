@@ -15,8 +15,8 @@ class Student:
         if attrs is None:
             attrs = self.__dict__.keys()
         else:
-            if not isinstance(attrs, list) or not 
-            all(isinstance(a, str) for a in attrs):
+            if not isinstance(attrs, list) or not all(isinstance(
+            a, str) for a in attrs):
                 raise TypeError("attrs must be a list of string")
         json_dict = {}
         for key, value in self.__dict__.items():
