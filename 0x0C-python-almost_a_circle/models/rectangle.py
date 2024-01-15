@@ -7,7 +7,7 @@ class Rectangle(Base):
     """represents the class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor"""
-        super.__init__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -74,7 +74,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """overriide method"""
-        return "[Rectangle] ({}) (}/{} - {}/{}".format(self.id,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
@@ -92,7 +92,7 @@ class Rectangle(Base):
         return {
                 'id': self.id,
                 'width': self.width,
-                'height': self.height
-                'x': self.x
+                'height': self.height,
+                'x': self.x,
                 'y': self.y
                 }
