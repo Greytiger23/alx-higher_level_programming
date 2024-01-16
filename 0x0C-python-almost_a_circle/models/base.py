@@ -45,7 +45,8 @@ class Base:
         elif cls.__name__ == "Square":
             dummy_instance = cls(1)
         else:
-            raise TypeError("Cannot create an instance for {}".format(cls.__name__))
+            raise TypeError("Cannot create an instance for {}".format(
+                cls.__name__))
         dummy_instance.update(**dictionary)
         return dummy_instance
 
