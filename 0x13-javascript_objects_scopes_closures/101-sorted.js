@@ -3,9 +3,9 @@ const { dict } = require('./101-data');
 const a = {};
 for (const [userId, occurrences] of Object.entries(dict)) {
   if (occurrences in a) {
-    a[occurrences].push[userId];
+    a[occurrences].push(parseInt(userId));
   } else {
-    a[occurrences] = [userId];
+    a[occurrences] = [parseInt(userId)];
   }
 }
 console.log(a);
