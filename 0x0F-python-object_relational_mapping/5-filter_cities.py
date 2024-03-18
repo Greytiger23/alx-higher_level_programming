@@ -8,13 +8,12 @@ def list_cos(username, password, database, state_name):
     a = MySQLdb.connect(host="localhost", port=3306, user=username,
                         passwd=password, db=database)
     b = a.cursor()
-    query = """SELECT cities.name FROM cities
-              JOIN states ON states.id = cities.states_id
-              WHERE states.name = %s ORDER BY cities.id"""
-    b.execute(query, (state_name,))
+    b.execute("""SELECT cities.name FROM cities
+              INNER JOIN states ON states.id=cities.state_id
+              WHERE states.name=%s""", (state_name,))
     c = b.fetchall()
-    for row in c:
-        print(row)
+    d = list(row[0] for row in c)
+    print(*d, sep=", ")
     b.close()
     a.close()
 
