@@ -1,3 +1,3 @@
 #!/bin/bash
-# Bash script that takes in a URL, sends a request to that URL,
-echo -n "curl -sI "$1"" | wc -c
+# Bash script that takes in a URL, sends a request to that URL
+curl -sI "$1" | grep -i content-length | wc -c
