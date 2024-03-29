@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """takes url and sends request and displays"""
 
-
 from urllib.request import urlopen, Request
 import sys
 from urllib.error import HTTPError
