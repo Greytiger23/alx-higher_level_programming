@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """takes url and requests and displays"""
-from urllib.request import urlopen
 import sys
 import urllib.request
 
