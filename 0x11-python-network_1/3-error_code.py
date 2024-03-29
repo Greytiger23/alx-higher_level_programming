@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# takes url and sends request and displays
-import urllib.request
+"""takes url and sends request and displays"""
+from urllib.request import urlopen
 import sys
-import urllib.error
+from urllib.error import HTTPError
+import urllib.request
 
 
 url = sys.argv[1]
