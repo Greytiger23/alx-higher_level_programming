@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ python script that fetches url"""
 from urllib.request import urlopen
+import urllib.request
 
 
 url = 'https://alx-intranet.hbtn.io/status'
