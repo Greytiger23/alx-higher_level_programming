@@ -16,7 +16,7 @@ request(apiUrl, (error, response, body) => {
 
   const f = JSON.parse(body).results;
   const count = f.reduce((total, film) => {
-    if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/' + fId + '/')) {
+    if (film.characters.includes('https://swapi-api.alx-tools.com/api/films/' + fId + '/')) {
       return total + 1;
     }
     return total;
