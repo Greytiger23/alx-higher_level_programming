@@ -16,15 +16,15 @@ request(apiUrl, (error, response, body) => {
 
   const m = JSON.parse(body);
   const c = m.characters;
-  
-  function fetchCharacterName(url) {
+
+  function fetchCharacterName (url) {
     return new Promise((resolve, reject) => {
       request(url, (error, response, body) => {
         if (error) {
           reject(error);
           return;
-	}
-	if (response.statusCode !== 200) {
+        }
+        if (response.statusCode !== 200) {
           console.error('Error: Status code ' + response.statusCode);
         }
         const a = JSON.parse(body);
